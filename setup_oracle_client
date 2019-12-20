@@ -1,0 +1,14 @@
+## Install SQL\*Plus
+
+1. Download .rpm package [here](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html)
+    - oracle-instantclinet*-basic-*.rpm
+    - oracle-instantclinet*-devel-*.rpm
+    - oracle-instantclinet*-sqlplus-*.rpm
+1. Install alien (`sudo apt-get install alien`)
+1. Convert the rpm files and install 
+    - `sudo alien -i oracle-instantclinet*-basic-*.rpm`
+    - `sudo alien -i oracle-instantclinet*-devel-*.rpm`
+    - `sudo alien -i oracle-instantclinet*-sqlplus-*.rpm`
+1. Install libaio1
+1. Add oracle.conf (`echo /usr/lib/oracle/12.1/client/lib > /etc/ld.so.conf.d/oracle.conf`) and Reload .conf (`sudo ldconfig`)
+    - - If `libsqlplus.so: cannot open shared object file: No such file or directory` is displayed when execute sqlplus   
