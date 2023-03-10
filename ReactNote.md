@@ -34,5 +34,34 @@ document.title = "Amazing Page";
 ```
 3. Detect Tab Active / UnActive
 ```code
+class MyComponent extends Component {
+    useEffect(() => {
+        const handleVisibilityChange = () => {
+            if (window.ENV.SOCKET_ENABLE) {
+                if (document.visibilityState === 'hidden') {
+                    // highlight-start
+                    console.log(document.visibilityState);
+                    // highlight-end
+                } else {
+                    // highlight-start
+                    console.log(document.visibilityState);
+                    // highlight-end
+                }
+            }
+        };
+        document.addEventListener('visibilitychange', handleVisibilityChange);
 
+        return () => {
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [document.visibilityState]);
+
+    // Render method.
+    render() {
+        return (
+            <div>My component</div>
+        )
+    }
+}
 ```
