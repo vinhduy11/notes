@@ -32,3 +32,7 @@ class MyComponent extends Component {
 ```code
 document.title = "Amazing Page";
 ```
+3. Detect Tab Active / UnActive
+```code
+
+```
