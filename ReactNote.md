@@ -1,5 +1,5 @@
-```React Note
-`1. Alert When Close Tab
+
+1. Alert When Close Tab
 ```code
 class MyComponent extends Component {
     // Things to do before unloading/closing the tab
@@ -28,3 +28,5 @@ class MyComponent extends Component {
     }
 }
 ```
+2. Change Title Tab
+document.title = "Amazing Page";
