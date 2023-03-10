@@ -29,4 +29,6 @@ class MyComponent extends Component {
 }
 ```
 2. Change Title Tab
+```code
 document.title = "Amazing Page";
+```
